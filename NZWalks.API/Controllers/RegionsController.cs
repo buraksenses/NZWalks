@@ -61,4 +61,36 @@ public class RegionsController : ControllerBase
       //Return DTO
       return Ok(regionDto);
    }
+   
+   //POST: To Create New Region
+   //POST: https:localhost:portnumber/api/regions
+   [HttpPost]
+   public IActionResult CreateRegion([FromBody] AddRegionRequestDto addRegionRequestDto)
+   {
+      //Map or convert DTO to Domain Model
+      var regionDomainModel = new Region
+      {
+         Code = addRegionRequestDto.Code,
+         Name = addRegionRequestDto.Name,
+         RegionImageUrl = addRegionRequestDto.RegionImageUrl
+      };
+
+      //Use Domain Model to create Region
+      _dbContext.Regions.Add(regionDomainModel);
+      _dbContext.SaveChanges();
+
+      //Map Domain model back to DTO
+      var regionDto = new RegionDto
+      {
+         Id = regionDomainModel.Id,
+         Code = regionDomainModel.Code,
+         Name = regionDomainModel.Name,
+         RegionImageUrl = regionDomainModel.RegionImageUrl
+      };
+      
+      return CreatedAtAction(nameof(GetRegionById),new {id = regionDto.Id}, regionDto);
+   }
+   
+   
+   
 }

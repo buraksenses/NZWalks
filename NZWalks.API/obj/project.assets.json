@@ -3924,11 +3924,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SIRHOT\\.NET Projects\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
+      "projectUniqueName": "D:\\SIRHOT\\.NET Projects\\NZWalks\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
       "projectName": "NZWalks.API",
-      "projectPath": "D:\\SIRHOT\\.NET Projects\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
+      "projectPath": "D:\\SIRHOT\\.NET Projects\\NZWalks\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
       "packagesPath": "C:\\Users\\ecebs\\.nuget\\packages\\",
-      "outputPath": "D:\\SIRHOT\\.NET Projects\\NZWalks\\NZWalks.API\\obj\\",
+      "outputPath": "D:\\SIRHOT\\.NET Projects\\NZWalks\\NZWalks\\NZWalks.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ecebs\\AppData\\Roaming\\NuGet\\NuGet.Config",

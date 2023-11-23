@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zSqhphKfvdlyL9efucQoNSWQNHJsi9qGMYVNJiXTUk62EFSEqAMCVEwS0Wba1+jcR/FzRMOUO0EnC/FBXqUHrQ==",
+  "dgSpecHash": "Mp499kvqkObGP6od1GLwMRXuHednfeywKVmq2ipMuweDAfK93yDkPL341XAvTEHBijREs4PJ9Um34qZL0EQO9A==",
   "success": true,
-  "projectFilePath": "D:\\SIRHOT\\.NET Projects\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
+  "projectFilePath": "D:\\SIRHOT\\.NET Projects\\NZWalks\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ecebs\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ecebs\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
