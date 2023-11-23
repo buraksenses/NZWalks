@@ -92,5 +92,34 @@ public class RegionsController : ControllerBase
    }
    
    
-   
+   //Update Region
+   //PUT: https://localhost:portnumber/api/regions/{id}
+   [HttpPut]
+   [Route("{id:guid}")]
+   public IActionResult UpdateRegion([FromRoute] Guid id, [FromBody] UpdateRegionRequestDto updateRegionRequestDto)
+   {
+      //Check if region exists
+      var updatingDomain = _dbContext.Regions.FirstOrDefault(x => x.Id == id);
+
+      if (updatingDomain == null)
+         return NotFound();
+
+      //Map DTO to Domain Model
+      updatingDomain.Code = updateRegionRequestDto.Code;
+      updatingDomain.Name = updateRegionRequestDto.Name;
+      updatingDomain.RegionImageUrl = updateRegionRequestDto.RegionImageUrl;
+
+      _dbContext.SaveChanges();
+
+      //Convert Domain Model to DTO
+      var regionDto = new RegionDto
+      {
+         Id = updatingDomain.Id,
+         Code = updatingDomain.Code,
+         Name = updatingDomain.Name,
+         RegionImageUrl = updatingDomain.RegionImageUrl
+      };
+
+      return Ok(regionDto);
+   }
 }
