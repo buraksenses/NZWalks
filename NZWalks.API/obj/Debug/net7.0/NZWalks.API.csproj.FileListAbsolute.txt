@@ -150,3 +150,5 @@ D:\SIRHOT\.NET Projects\NZWalks\NZWalks\NZWalks.API\obj\Debug\net7.0\scopedcss\b
 D:\SIRHOT\.NET Projects\NZWalks\NZWalks\NZWalks.API\obj\Debug\net7.0\NZWalks.API.csproj.CopyComplete
 D:\SIRHOT\.NET Projects\NZWalks\NZWalks\NZWalks.API\obj\Debug\net7.0\NZWalks.API.genruntimeconfig.cache
 D:\SIRHOT\.NET Projects\NZWalks\NZWalks\NZWalks.API\obj\Debug\net7.0\ref\NZWalks.API.dll
+D:\SIRHOT\.NET Projects\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\AutoMapper.dll
+D:\SIRHOT\.NET Projects\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

@@ -4,11 +4,11 @@ using NZWalks.API.Models.Domain;
 
 namespace NZWalks.API.Repositories;
 
-public class SQLRegionRepository : IRegionRepository
+public class SqlRegionRepository : IRegionRepository
 {
     private readonly NZWalksDbContext _dbContext;
 
-    public SQLRegionRepository(NZWalksDbContext dbContext)
+    public SqlRegionRepository(NZWalksDbContext dbContext)
     {
         _dbContext = dbContext;
     }
@@ -33,7 +33,7 @@ public class SQLRegionRepository : IRegionRepository
     public async Task<Region?> UpdateRegionAsync(Guid id,Region region)
     {
         //Check if region exists
-        var updatingRegion = GetRegionByIdAsync(id).Result;
+        var updatingRegion = await GetRegionByIdAsync(id);
 
         if (updatingRegion == null)
             return null;
