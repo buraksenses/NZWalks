@@ -10,7 +10,6 @@ namespace NZWalks.API.Controllers;
 //https://localhost:portnumber/api/regions
 [Route("api/[controller]")]
 [ApiController]
-[Authorize]
 public class RegionsController : ControllerBase
 {
    private readonly IRegionRepository _regionRepository;
@@ -23,6 +22,7 @@ public class RegionsController : ControllerBase
    //GET ALL REGIONS
    //GET: https://localhost:portnumber/api/regions
    [HttpGet]
+   [Authorize(Roles = "Reader")]
    public async Task<IActionResult> GetAll()
    {
       //Get Data From Database - Domain Models
@@ -49,6 +49,7 @@ public class RegionsController : ControllerBase
    //GET: https://localhost:portnumber/api/regions/{id}
    [HttpGet]
    [Route("{id:guid}")]
+   [Authorize(Roles = "Reader")]
    public async Task<IActionResult> GetRegionById([FromRoute]Guid id)
    {
       //var region = _dbContext.Regions.Find(id); this can only be used for Id property
@@ -70,6 +71,7 @@ public class RegionsController : ControllerBase
    //POST: https:localhost:portnumber/api/regions
    [HttpPost]
    [ValidateModel]
+   [Authorize(Roles = "Writer")]
    public async Task<IActionResult> CreateRegion([FromBody] AddRegionRequestDto addRegionRequestDto)
    {
       //Map or convert DTO to Domain Model
@@ -90,6 +92,7 @@ public class RegionsController : ControllerBase
    [HttpPut]
    [Route("{id:guid}")]
    [ValidateModel]
+   [Authorize(Roles = "Writer")]
    public async Task<IActionResult> UpdateRegion([FromRoute] Guid id, [FromBody] UpdateRegionRequestDto updateRegionRequestDto)
    {
       //Map DTO to Domain Model
@@ -110,6 +113,7 @@ public class RegionsController : ControllerBase
    //DELETE: https://localhost:portnumber/api/reions/{id}
    [HttpDelete]
    [Route("{id:guid}")]
+   [Authorize(Roles = "Writer")]
    public async Task<IActionResult> DeleteRegion([FromRoute] Guid id)
    {
       var regionToDelete = await _regionRepository.DeleteRegionAsync(id);
